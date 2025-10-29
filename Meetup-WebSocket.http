@@ -1,0 +1,6 @@
+@Meetup_WebSocket_HostAddress = http://localhost:5093
+
+GET {{Meetup_WebSocket_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
