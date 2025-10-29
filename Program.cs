@@ -75,7 +75,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowNextApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000") // A porta do seu app Next.js
+            policy.WithOrigins("https://signal-r-meetup-app.vercel.app") // A porta do seu app Next.js
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials(); // Essencial para SignalR
