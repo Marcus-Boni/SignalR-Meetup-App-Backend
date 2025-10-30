@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Meetup-WebSocket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a82fbb4329ee333a3fd88ead23111279b564e3c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Meetup-WebSocket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Meetup-WebSocket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
