@@ -1,82 +1,82 @@
-# ?? SignalR Meetup App - Backend
+# 🚀 SignalR Meetup App - Backend
 
 [![.NET](https://img.shields.io/badge/.NET-9.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
 [![SignalR](https://img.shields.io/badge/SignalR-Real--time-00C7B7)](https://dotnet.microsoft.com/apps/aspnet/signalr)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Backend moderno em **ASP.NET Core** com **SignalR** para demonstra��o de comunica��o em tempo real, incluindo rastreamento de ve�culos, chat multi-sala e notifica��es de pagamento.
+Backend moderno em **ASP.NET Core** com **SignalR** para demonstração de comunicação em tempo real, incluindo rastreamento de veículos, chat multi-sala e notificações de pagamento.
 
 ---
 
-## ?? �ndice
+## 📋 Índice
 
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Funcionalidades](#-funcionalidades)
-- [Tecnologias](#?-tecnologias)
+- [Tecnologias](#-tecnologias)
 - [Arquitetura](#-arquitetura)
-- [Pr�-requisitos](#-pr�-requisitos)
-- [Instala��o](#-instala��o)
-- [Configura��o](#?-configura��o)
+- [Pré-requisitos](#-pré-requisitos)
+- [Instalação](#-instalação)
+- [Configuração](#-configuração)
 - [Uso](#-uso)
 - [Endpoints da API](#-endpoints-da-api)
 - [Hubs do SignalR](#-hubs-do-signalr)
-- [Autentica��o](#-autentica��o)
+- [Autenticação](#-autenticação)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Deploy](#-deploy)
-- [Contribui��o](#-contribui��o)
-- [Licen�a](#-licen�a)
+- [Contribuição](#-contribuição)
+- [Licença](#-licença)
 
 ---
 
-## ?? Sobre o Projeto
+## 🎯 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte de um **Meetup sobre SignalR** e demonstra implementa��es pr�ticas de comunica��o em tempo real usando ASP.NET Core. O backend oferece tr�s casos de uso reais:
+Este projeto foi desenvolvido como parte de um **Meetup sobre SignalR** e demonstra implementações práticas de comunicação em tempo real usando ASP.NET Core. O backend oferece três casos de uso reais:
 
-1. **?? Rastreamento de Ve�culos**: Simula��o de GPS em tempo real com movimenta��o suave
-2. **?? Chat Multi-Sala**: Sistema de chat com m�ltiplas salas e gerenciamento de grupos
-3. **?? Notifica��es de Pagamento**: Processamento ass�ncrono com atualiza��es em tempo real
+1. **🚗 Rastreamento de Veículos**: Simulação de GPS em tempo real com movimentação suave
+2. **💬 Chat Multi-Sala**: Sistema de chat com múltiplas salas e gerenciamento de grupos
+3. **💳 Notificações de Pagamento**: Processamento assíncrono com atualizações em tempo real
 
-O projeto segue princ�pios de **Clean Architecture** e **SOLID**, separando responsabilidades entre Controllers, Services e Hubs.
+O projeto segue princípios de **Clean Architecture** e **SOLID**, separando responsabilidades entre Controllers, Services e Hubs.
 
 ---
 
-## ? Funcionalidades
+## ✨ Funcionalidades
 
-### ?? Autentica��o JWT
-- Login com usu�rios de demonstra��o
-- Tokens JWT para autentica��o segura
-- Valida��o de tokens em tempo real
-- Suporte a autentica��o via query string (SignalR)
+### 🔐 Autenticação JWT
+- Login com usuários de demonstração
+- Tokens JWT para autenticação segura
+- Validação de tokens em tempo real
+- Suporte a autenticação via query string (SignalR)
 
-### ?? Rastreamento de Ve�culos (TrackingHub)
-- Simula��o realista de movimento de ve�culo
-- Interpola��o suave entre waypoints
-- Dados detalhados: velocidade, dire��o, status
+### 🚗 Rastreamento de Veículos (TrackingHub)
+- Simulação realista de movimento de veículo
+- Interpolação suave entre waypoints
+- Dados detalhados: velocidade, direção, status
 - Paradas em pontos de entrega
-- Broadcast server-to-client autom�tico
+- Broadcast server-to-client automático
 
-### ?? Chat em Tempo Real (ChatHub)
-- M�ltiplas salas de chat
+### 💬 Chat em Tempo Real (ChatHub)
+- Múltiplas salas de chat
 - Join/Leave de salas dinamicamente
-- Notifica��es de entrada/sa�da de usu�rios
-- Mensagens com timestamp e identifica��o de usu�rio
-- Suporte a autentica��o obrigat�ria
+- Notificações de entrada/saída de usuários
+- Mensagens com timestamp e identificação de usuário
+- Suporte a autenticação obrigatória
 
-### ?? Processamento de Pagamentos (PaymentHub)
-- Simula��o de processamento ass�ncrono
-- Notifica��es de status em tempo real
-- Grupos privados por usu�rio e pedido
+### 💳 Processamento de Pagamentos (PaymentHub)
+- Simulação de processamento assíncrono
+- Notificações de status em tempo real
+- Grupos privados por usuário e pedido
 - Estados: Pending ? Processing ? Completed/Failed
 - Fire-and-forget pattern
 
 ---
 
-## ??? Tecnologias
+## 🛠️ Tecnologias
 
 - **[.NET 9.0](https://dotnet.microsoft.com/)** - Framework principal
-- **[ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr)** - Comunica��o em tempo real
-- **[JWT Bearer Authentication](https://jwt.io/)** - Autentica��o e autoriza��o
-- **[Swagger/OpenAPI](https://swagger.io/)** - Documenta��o da API
+- **[ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr)** - Comunicação em tempo real
+- **[JWT Bearer Authentication](https://jwt.io/)** - Autenticação e autorização
+- **[Swagger/OpenAPI](https://swagger.io/)** - Documentação da API
 - **[Hosted Services](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services)** - Background tasks
 
 ### Pacotes NuGet
@@ -88,68 +88,68 @@ O projeto segue princ�pios de **Clean Architecture** e **SOLID**, separando resp
 
 ---
 
-## ??? Arquitetura
+## 🏗️ Arquitetura
 
-### Padr�es Implementados
+### Padrões Implementados
 
-- **Clean Architecture**: Separa��o clara entre camadas
-- **Dependency Injection**: Inje��o de depend�ncias nativa do ASP.NET Core
-- **Service Layer**: L�gica de neg�cio isolada em services
-- **DTOs (Data Transfer Objects)**: Contratos de comunica��o entre camadas
-- **Background Services**: Processamento ass�ncrono com `IHostedService`
-- **Hub Pattern**: Thin Hubs focados apenas em comunica��o
+- **Clean Architecture**: Separação clara entre camadas
+- **Dependency Injection**: Injeção de dependências nativa do ASP.NET Core
+- **Service Layer**: Lógica de negócio isolada em services
+- **DTOs (Data Transfer Objects)**: Contratos de comunicação entre camadas
+- **Background Services**: Processamento assíncrono com `IHostedService`
+- **Hub Pattern**: Thin Hubs focados apenas em comunicação
 
 ### Fluxo de Dados
 
 ```
 Client (Next.js/React)
-    ?
-???????????????????????????????????????
-?   Controllers (HTTP REST)           ?
-?   - AuthController                  ?
-?   - PaymentsController              ?
-???????????????????????????????????????
-    ?
-???????????????????????????????????????
-?   Services (Business Logic)         ?
-?   - IAuthService                    ?
-?   - IPaymentService                 ?
-?   - CarTrackingService              ?
-???????????????????????????????????????
-    ?
-???????????????????????????????????????
-?   SignalR Hubs (Real-time)          ?
-?   - TrackingHub                     ?
-?   - ChatHub                         ?
-?   - PaymentHub                      ?
-???????????????????????????????????????
-    ?
+    ↓
+┌─────────────────────────────────────┐
+│   Controllers (HTTP REST)           │
+│   - AuthController                  │
+│   - PaymentsController              │
+└─────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────┐
+│   Services (Business Logic)         │
+│   - IAuthService                    │
+│   - IPaymentService                 │
+│   - CarTrackingService              │
+└─────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────┐
+│   SignalR Hubs (Real-time)          │
+│   - TrackingHub                     │
+│   - ChatHub                         │
+│   - PaymentHub                      │
+└─────────────────────────────────────┘
+    ↓
 Client (WebSocket Connection)
 ```
 
 ---
 
-## ?? Pr�-requisitos
+## 📦 Pré-requisitos
 
 - [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) ou superior
 - IDE recomendada:
   - [Visual Studio 2022](https://visualstudio.microsoft.com/) (17.8+)
-  - [Visual Studio Code](https://code.visualstudio.com/) com extens�o C#
+  - [Visual Studio Code](https://code.visualstudio.com/) com extensão C#
   - [JetBrains Rider](https://www.jetbrains.com/rider/)
 - [Git](https://git-scm.com/)
 
 ---
 
-## ?? Instala��o
+## 🚀 Instalação
 
-### 1. Clone o reposit�rio
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/Marcus-Boni/SignalR-Meetup-App-Backend.git
 cd SignalR-Meetup-App-Backend
 ```
 
-### 2. Restaure as depend�ncias
+### 2. Restaure as dependências
 
 ```bash
 dotnet restore
@@ -161,38 +161,17 @@ dotnet restore
 dotnet run
 ```
 
-O servidor estar� dispon�vel em:
+O servidor estará disponível em:
 - **HTTPS**: `https://localhost:5001`
 - **HTTP**: `http://localhost:5000`
 
 ---
 
-## ?? Configura��o
-
-### appsettings.json
-
-Configure as seguintes se��es no arquivo `appsettings.json`:
-
-```json
-{
-  "Jwt": {
-    "Key": "SuaChaveSecretaSuperSegura_MinimoDe32Caracteres!",
-    "Issuer": "CarTrackingApi",
-    "Audience": "CarTrackingApiClients"
-  },
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning",
-      "Microsoft.AspNetCore.SignalR": "Debug"
-    }
-  }
-}
-```
+## ⚙️ Configuração
 
 ### CORS
 
-Para desenvolvimento local com frontend, ajuste a pol�tica CORS em `Program.cs`:
+Para desenvolvimento local com frontend, ajuste a política CORS em `Program.cs`:
 
 ```csharp
 builder.Services.AddCors(options =>
@@ -201,7 +180,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
                 "http://localhost:3000",  // Next.js local
-                "https://seu-app.vercel.app"  // Produ��o
+                "https://seu-app.vercel.app"  // Produção
               )
               .AllowAnyHeader()
               .AllowAnyMethod()
@@ -212,9 +191,9 @@ builder.Services.AddCors(options =>
 
 ---
 
-## ?? Uso
+## 💻 Uso
 
-### 1. Autentica��o
+### 1. Autenticação
 
 Primeiro, obtenha um token JWT:
 
@@ -227,7 +206,7 @@ curl -X POST https://localhost:5001/api/auth/login \
   }'
 ```
 
-**Usu�rios de demonstra��o:**
+**Usuários de demonstração:**
 - `admin` / `admin123`
 - `usuario1` / `senha123`
 - `usuario2` / `senha456`
@@ -249,7 +228,7 @@ import * as signalR from "@microsoft/signalr";
 
 const token = "seu-token-jwt";
 
-// Conex�o com autentica��o
+// Conexão com autenticação
 const connection = new signalR.HubConnectionBuilder()
   .withUrl("https://localhost:5001/chatHub", {
     accessTokenFactory: () => token
@@ -270,17 +249,17 @@ connection.on("ReceiveMessage", (message) => {
 });
 
 // Enviar mensagem
-await connection.invoke("SendMessage", "sala-geral", "Ol�, pessoal!");
+await connection.invoke("SendMessage", "sala-geral", "Olá, pessoal!");
 ```
 
 ---
 
-## ?? Endpoints da API
+## 📡 Endpoints da API
 
-### Autentica��o
+### Autenticação
 
 #### POST `/api/auth/login`
-Autentica um usu�rio e retorna um token JWT.
+Autentica um usuário e retorna um token JWT.
 
 **Request Body:**
 ```json
@@ -300,7 +279,7 @@ Autentica um usu�rio e retorna um token JWT.
 ```
 
 #### GET `/api/auth/validate`
-Valida um token JWT (requer autentica��o).
+Valida um token JWT (requer autenticação).
 
 **Response:**
 ```json
@@ -313,14 +292,14 @@ Valida um token JWT (requer autentica��o).
 ```
 
 #### GET `/api/auth/health`
-Health check do servi�o de autentica��o.
+Health check do serviço de autenticação.
 
 ---
 
 ### Pagamentos
 
 #### POST `/api/payments/pay`
-Inicia um pagamento ass�ncrono (requer autentica��o).
+Inicia um pagamento assíncrono (requer autenticação).
 
 **Request Body:**
 ```json
@@ -341,22 +320,22 @@ Inicia um pagamento ass�ncrono (requer autentica��o).
 }
 ```
 
-> **Nota:** O status do pagamento ser� enviado via SignalR (PaymentHub).
+> **Nota:** O status do pagamento será enviado via SignalR (PaymentHub).
 
 #### GET `/api/payments/health`
-Health check do servi�o de pagamentos.
+Health check do serviço de pagamentos.
 
 ---
 
-## ?? Hubs do SignalR
+## 🔌 Hubs do SignalR
 
 ### TrackingHub (`/trackingHub`)
 
-**Server-to-Client (Broadcast autom�tico)**
+**Server-to-Client (Broadcast automático)**
 
-| M�todo | Par�metros | Descri��o |
+| Método | Parâmetros | Descrição |
 |--------|-----------|-----------|
-| `ReceivePosition` | `VehiclePosition` | Recebe posi��o atualizada do ve�culo a cada 50ms |
+| `ReceivePosition` | `VehiclePosition` | Recebe posição atualizada do veículo a cada 50ms |
 
 **VehiclePosition:**
 ```typescript
@@ -377,7 +356,7 @@ Health check do servi�o de pagamentos.
 
 **Client-to-Server**
 
-| M�todo | Par�metros | Retorno | Descri��o |
+| Método | Parâmetros | Retorno | Descrição |
 |--------|-----------|---------|-----------|
 | `JoinRoom` | `roomName: string` | `void` | Entra em uma sala de chat |
 | `LeaveRoom` | `roomName: string` | `void` | Sai de uma sala de chat |
@@ -385,11 +364,11 @@ Health check do servi�o de pagamentos.
 
 **Server-to-Client**
 
-| M�todo | Par�metros | Descri��o |
+| Método | Parâmetros | Descrição |
 |--------|-----------|-----------|
 | `ReceiveMessage` | `ChatMessageDto` | Recebe nova mensagem na sala |
-| `UserJoined` | `{user, roomName, timestamp}` | Notifica entrada de usu�rio |
-| `UserLeft` | `{user, roomName, timestamp}` | Notifica sa�da de usu�rio |
+| `UserJoined` | `{user, roomName, timestamp}` | Notifica entrada de usuário |
+| `UserLeft` | `{user, roomName, timestamp}` | Notifica saída de usuário |
 
 **ChatMessageDto:**
 ```typescript
@@ -407,17 +386,17 @@ Health check do servi�o de pagamentos.
 
 **Client-to-Server**
 
-| M�todo | Par�metros | Retorno | Descri��o |
+| Método | Parâmetros | Retorno | Descrição |
 |--------|-----------|---------|-----------|
-| `SubscribeToPaymentStatus` | `orderId: string` | `void` | Inscreve-se para atualiza��es de pagamento |
-| `UnsubscribeFromPaymentStatus` | `orderId: string` | `void` | Cancela inscri��o |
+| `SubscribeToPaymentStatus` | `orderId: string` | `void` | Inscreve-se para atualizações de pagamento |
+| `UnsubscribeFromPaymentStatus` | `orderId: string` | `void` | Cancela inscrição |
 
 **Server-to-Client**
 
-| M�todo | Par�metros | Descri��o |
+| Método | Parâmetros | Descrição |
 |--------|-----------|-----------|
-| `SubscriptionConfirmed` | `{orderId, message, timestamp}` | Confirma inscri��o |
-| `PaymentStatusUpdated` | `PaymentStatusDto` | Atualiza��o de status do pagamento |
+| `SubscriptionConfirmed` | `{orderId, message, timestamp}` | Confirma inscrição |
+| `PaymentStatusUpdated` | `PaymentStatusDto` | Atualização de status do pagamento |
 
 **PaymentStatusDto:**
 ```typescript
@@ -431,9 +410,9 @@ Health check do servi�o de pagamentos.
 
 ---
 
-## ?? Autentica��o
+## 🔐 Autenticação
 
-### Fluxo de Autentica��o JWT
+### Fluxo de Autenticação JWT
 
 1. Cliente faz login via `/api/auth/login`
 2. Backend valida credenciais e retorna token JWT
@@ -441,9 +420,9 @@ Health check do servi�o de pagamentos.
 4. Para HTTP requests: adiciona header `Authorization: Bearer {token}`
 5. Para SignalR: passa token via `accessTokenFactory` ou query string
 
-### Autentica��o em SignalR
+### Autenticação em SignalR
 
-O projeto suporta dois m�todos:
+O projeto suporta dois métodos:
 
 **1. Via Token Factory (Recomendado):**
 ```javascript
@@ -463,141 +442,68 @@ const connection = new signalR.HubConnectionBuilder()
 
 ---
 
-## ?? Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 Meetup-WebSocket/
-??? Controllers/
-?   ??? AuthController.cs          # Endpoints de autentica��o
-?   ??? PaymentsController.cs      # Endpoints de pagamento
-??? Hubs/
-?   ??? TrackingHub.cs            # Hub de rastreamento
-?   ??? ChatHub.cs                # Hub de chat
-?   ??? PaymentHub.cs             # Hub de pagamentos
-??? Services/
-?   ??? IAuthService.cs           # Interface de autentica��o
-?   ??? AuthService.cs            # Implementa��o de autentica��o
-?   ??? IPaymentService.cs        # Interface de pagamento
-?   ??? PaymentService.cs         # L�gica de pagamento
-?   ??? CarTrackingService.cs     # Background service de rastreamento
-??? Dtos/
-?   ??? LoginRequestDto.cs        # DTO de login
-?   ??? LoginResponseDto.cs       # DTO de resposta de login
-?   ??? ChatMessageDto.cs         # DTO de mensagem de chat
-?   ??? PaymentRequestDto.cs      # DTO de requisi��o de pagamento
-?   ??? PaymentStatusDto.cs       # DTO de status de pagamento
-??? Properties/
-?   ??? launchSettings.json       # Configura��es de execu��o
-??? appsettings.json              # Configura��es da aplica��o
-??? appsettings.Development.json  # Configura��es de desenvolvimento
-??? Program.cs                    # Ponto de entrada e configura��o
-??? Meetup-WebSocket.csproj       # Arquivo de projeto
+├── Controllers/
+│   ├── AuthController.cs          # Endpoints de autenticação
+│   └── PaymentsController.cs      # Endpoints de pagamento
+├── Hubs/
+│   ├── TrackingHub.cs            # Hub de rastreamento
+│   ├── ChatHub.cs                # Hub de chat
+│   └── PaymentHub.cs             # Hub de pagamentos
+├── Services/
+│   ├── IAuthService.cs           # Interface de autenticação
+│   ├── AuthService.cs            # Implementação de autenticação
+│   ├── IPaymentService.cs        # Interface de pagamento
+│   ├── PaymentService.cs         # Lógica de pagamento
+│   └── CarTrackingService.cs     # Background service de rastreamento
+├── Dtos/
+│   ├── LoginRequestDto.cs        # DTO de login
+│   ├── LoginResponseDto.cs       # DTO de resposta de login
+│   ├── ChatMessageDto.cs         # DTO de mensagem de chat
+│   ├── PaymentRequestDto.cs      # DTO de requisição de pagamento
+│   └── PaymentStatusDto.cs       # DTO de status de pagamento
+├── Properties/
+│   └── launchSettings.json       # Configurações de execução
+├── appsettings.json              # Configurações da aplicação
+├── appsettings.Development.json  # Configurações de desenvolvimento
+├── Program.cs                    # Ponto de entrada e configuração
+└── Meetup-WebSocket.csproj       # Arquivo de projeto
 ```
 
 ---
 
-## ?? Deploy
+## 🤝 Contribuição
 
-### Docker (Recomendado)
+Contribuições são bem-vindas! Siga os passos:
 
-Crie um `Dockerfile`:
-
-```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
-WORKDIR /app
-EXPOSE 80
-EXPOSE 443
-
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
-WORKDIR /src
-COPY ["Meetup-WebSocket.csproj", "./"]
-RUN dotnet restore
-COPY . .
-RUN dotnet build -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish -c Release -o /app/publish
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Meetup-WebSocket.dll"]
-```
-
-**Build e Run:**
-```bash
-docker build -t signalr-backend .
-docker run -p 5000:80 signalr-backend
-```
-
-### Azure App Service
-
-1. Publique via Visual Studio (bot�o direito no projeto ? Publish)
-2. Ou via CLI:
-```bash
-az webapp up --name signalr-meetup-api --resource-group MeuGrupo
-```
-
-### Vari�veis de Ambiente (Produ��o)
-
-Configure as seguintes vari�veis de ambiente:
-
-```bash
-Jwt__Key=SuaChaveSecretaSegura
-Jwt__Issuer=SeuIssuer
-Jwt__Audience=SeuAudience
-ASPNETCORE_ENVIRONMENT=Production
-```
-
----
-
-## ?? Contribui��o
-
-Contribui��es s�o bem-vindas! Siga os passos:
-
-1. Fa�a um fork do projeto
+1. Faça um fork do projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit suas mudan�as (`git commit -m 'Adiciona nova funcionalidade'`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
 4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
 5. Abra um Pull Request
 
-### Padr�es de C�digo
+### Padrões de Código
 
-- Siga as conven��es do C# (.NET)
-- Use `async/await` para opera��es ass�ncronas
-- Adicione XML documentation comments em m�todos p�blicos
+- Siga as convenções do C# (.NET)
+- Use `async/await` para operações assíncronas
+- Adicione XML documentation comments em métodos públicos
 - Escreva logs informativos para debugging
-- Mantenha os Hubs "thin" (l�gica de neg�cio nos Services)
+- Mantenha os Hubs "thin" (lógica de negócio nos Services)
 
 ---
 
-## ?? Licen�a
+## 📝 Licença
 
-Este projeto est� sob a licen�a MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## ????? Autor
-
-**Marcus Vinicius Galv�o Boni**
-
-- GitHub: [@Marcus-Boni](https://github.com/Marcus-Boni)
-- Repository: [SignalR-Meetup-App-Backend](https://github.com/Marcus-Boni/SignalR-Meetup-App-Backend)
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
-## ?? Agradecimentos
+## 📚 Recursos Adicionais
 
-- Comunidade .NET
-- ASP.NET Core Team
-- SignalR Contributors
-- Participantes do Meetup
-
----
-
-## ?? Recursos Adicionais
-
-- [Documenta��o oficial do SignalR](https://learn.microsoft.com/en-us/aspnet/core/signalr/)
+- [Documentação oficial do SignalR](https://learn.microsoft.com/en-us/aspnet/core/signalr/)
 - [JWT Authentication no ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/authentication/)
 - [Background Services](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services)
 - [CORS no ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/cors)
@@ -606,8 +512,9 @@ Este projeto est� sob a licen�a MIT. Veja o arquivo [LICENSE](LICENSE) para mais
 
 <div align="center">
 
-**? Se este projeto foi �til, considere dar uma estrela!**
+**⭐ Se este projeto foi útil, considere dar uma estrela!**
 
-Made with ?? and .NET
+Made with ❤️ and .NET
 
 </div>
+
